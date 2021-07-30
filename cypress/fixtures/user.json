@@ -2,5 +2,7 @@
   "FirstName": "Adrian",
   "LastName": "Dolniak",
   "Username": "adriandolniak",
-  "Password": "secretpassword1234"
+  "Password": "secretpassword1234",
+  "WrongUsername": "wrongusername",
+  "wrongPassword": "wrongPassword1234"
 }

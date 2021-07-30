@@ -1,3 +1,4 @@
 {
-    "projectName": "Cypress-test-POM"
+    "projectName": "Cypress-test-POM",
+    "baseUrl": "https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/"
 }

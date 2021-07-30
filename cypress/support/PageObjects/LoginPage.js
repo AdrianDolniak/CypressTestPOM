@@ -1,20 +1,38 @@
-class LoginPage {
+export default class LoginPage {
 
-getUsername(){
+  getGreets() {
+    return cy.contains('h2', 'Login')
+  }
+  
+  getRegisterLink() {
+    return cy.contains('Register')
+  }
+
+  getUsername() {
     return cy.get('#username');
-}
+  }
 
-getPassword(){
+  getPassword() {
     return cy.get('#password');
-}
+  }
 
-getLoginButton() {
+  getLoginButton() {
     return cy.get('button[type=submit]');
-}
+  }
 
-getRegisterButton() {
+  getRegisterButton() {
     return cy.get('.btn.btn-link');
-}
+  }
 
+  getHash() {
+    return cy.hash();
+  }
+
+  getErrorMessage() {
+    return cy.get('.form-group.has-error > span')
+  }
+
+  getAlertMessage() {
+    return cy.get('.alert.alert-danger')
+  }
 }
-export default LoginPage

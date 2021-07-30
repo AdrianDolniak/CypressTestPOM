@@ -1,28 +1,42 @@
-class RegistrationPage {
+export default class RegistrationPage {
 
-getFirstName() {
+  getGreets() {
+    return cy.contains('h2', 'Register')
+  }
+  
+  getLoginLink() {
+    return cy.contains('Cancel')
+  }
+
+  getFirstName() {
     return cy.get('#firstName');
-}
+  }
 
-getLastName(){
+  getLastName() {
     return cy.get('#Text1');
-}
+  }
 
-getUsername(){
+  getUsername() {
     return cy.get('#username');
-}
+  }
 
-getPassword(){
+  getPassword() {
     return cy.get('#password');
-}
+  }
 
-getRegisterButton() {
+  getRegisterButton() {
     return cy.get('button[type=submit]');
-}
+  }
 
-getCancelButton() {
+  getCancelButton() {
     return cy.get('.btn.btn-link');
-}
+  }
 
+  getHash() {
+    return cy.hash();
+  }
+
+  getAlertMessage() {
+    return cy.get('.alert.alert-success')
+  }
 }
-export default RegistrationPage
