@@ -52,12 +52,7 @@ describe('/login', () => {
   })
 
   it('navigates to #/ on successful login after registration', () => {
-    loginPage.getRegisterButton().click()
-    registrationPage.getFirstName().type(userData.FirstName)
-    registrationPage.getLastName().type(userData.LastName)
-    registrationPage.getUsername().type(userData.Username)
-    registrationPage.getPassword().type(userData.Password)
-    registrationPage.getRegisterButton().click()
+    cy.registration(userData.FirstName, userData.LastName, userData.Username, userData.Password)
     loginPage.getHash()
       .should('eq', '#/login')
     loginPage.getUsername().type(userData.Username)
